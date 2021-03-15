@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href={{style_href}}>
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for item in data_dict %}
+            {% if item != 'title' %}
+                <li>{{data_dict[item[0]]}}:{{ data_dict[item[1]] }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

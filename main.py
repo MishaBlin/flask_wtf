@@ -5,7 +5,6 @@ app = Flask(__name__)
 prof_list = ['engineer', 'pilot', 'builder', 'doctor', 'biologist']
 
 
-@app.route('/')
 @app.route('/index/<title>')
 def index(title='Mars'):
     return render_template('base.html', title=title)
